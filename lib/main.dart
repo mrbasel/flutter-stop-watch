@@ -81,24 +81,25 @@ class _StopWatchState extends State<StopWatch> {
       children: <Widget>[
         Container(
           child: Text(clockDuration(stopWatch.elapsed), style: TextStyle(fontSize: 60)),
-          margin: EdgeInsets.only(bottom:20),
-          // margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+          margin: EdgeInsets.only(bottom:30),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
           Container(
           child: MaterialButton(
             child: Text(timerButtonText, style: TextStyle(color: Colors.white),),
-            color: Colors.blueAccent,
+            color: Colors.blue[800],
             onPressed: (){
               startTimer();
               }
 
           ),
-          margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+          margin: EdgeInsets.only(left: 40, top: 20),
+          height: 50,
+          width: 100,
         ),
-        
         Container(
           child: MaterialButton(
             child: Text('Reset', style: TextStyle(color: Colors.white),),
@@ -108,7 +109,9 @@ class _StopWatchState extends State<StopWatch> {
               }
 
           ),
-          // margin: EdgeInsets.symmetric(: 20),
+          margin: EdgeInsets.only(right: 40, top: 20),
+          height: 50,
+          width: 100,
         ),
           ],
         ),
