@@ -13,10 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Clock',
-      home: DefaultTabController(
-        length: 2,
-        child: HomePage()
-        ),
+      home: HomePage()
     );
   }
 }
@@ -27,36 +24,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: 
       AppBar(
-        title: Text('Clock'),
-        backgroundColor: Colors.blue,
-        bottom: TabBar(
-          tabs: [
-            Container(child: Icon(Icons.timer, size: 30,), margin: EdgeInsets.symmetric(vertical: 7),),
-            Container(child: Icon(Icons.timelapse, size: 30,),),
-          ] 
-          ),
+        title: Text('StopWatch',),
+        centerTitle: true,
+        backgroundColor: Colors.blue[800],
       ),
-        body: TabBarView(
-          children: [
-            ClockTimer(),
-            StopWatch()
-          ]
-           ),
-    );
-  }
-}
-
-
-class ClockTimer extends StatefulWidget {
-  @override
-  _ClockTimerState createState() => _ClockTimerState();
-}
-
-class _ClockTimerState extends State<ClockTimer> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      
+        body: StopWatch()
     );
   }
 }
