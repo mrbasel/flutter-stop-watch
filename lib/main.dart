@@ -40,7 +40,7 @@ class StopWatch extends StatefulWidget {
 }
 
 class _StopWatchState extends State<StopWatch> {
-  String timerButtonText = 'Start Timer';
+  String timerButtonText = 'Start';
   bool timerIsrunning = false; 
   var stopWatch = clock.stopwatch();
 
