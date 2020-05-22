@@ -1,3 +1,4 @@
+// Returns time in format "hours:minutes:seconds"
 String clockDuration(Duration duration) {
      String twoDigits(int n) {
        if (n >= 10) return "$n";
